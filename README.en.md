@@ -178,7 +178,7 @@ dsh plugin --profile desktop add dsh-media-desk
 dsh plugin --profile web add dsh-media-desk
 ```
 
-**2. Update.** When a new version comes out, the Plugins page shows an update — click it; a command-line install runs the same command again. Media Desk also checks npm itself: when a newer version exists the top bar shows `↑ vX.Y.Z`, Settings shows the version you are on, and the badge opens the npm page with the upgrade command. To install offline, download `dsh-media-desk-*.tgz` from [Releases](https://github.com/woniuniuniu/dsh-media-desk/releases/latest) and use `"file:$PWD/dsh-media-desk-VERSION.tgz"` in place of the package name.
+**2. Update.** When a new version comes out, the Plugins page shows an update — click it; a command-line install runs the same command again. Media Desk also checks npm itself (at most once an hour, reading only the version number): when a newer version exists the top bar shows `↑ vX.Y.Z`, Settings shows the version you are on, and the badge opens the npm page with the upgrade command. To install offline, download `dsh-media-desk-*.tgz` from [Releases](https://github.com/woniuniuniu/dsh-media-desk/releases/latest) and use `"file:$PWD/dsh-media-desk-VERSION.tgz"` in place of the package name.
 
 **3. Open.** **Media Desk** appears in the sidebar. On first launch it's filled with sample data so you can explore every page. Click **Clear sample data** in the top right when you're ready to start with your own.
 
@@ -301,10 +301,11 @@ To the people who tried it carefully, tracked problems down and sent fixes:
 - [dsh-agent-sixtyseven](https://github.com/dsh-agent-sixtyseven), for tracking down why account import on Windows kept saying "Monid isn’t installed yet" and fixing both how the command is found and how it's run ([#7](https://github.com/woniuniuniu/dsh-media-desk/issues/7), [#8](https://github.com/woniuniuniu/dsh-media-desk/pull/8))
 - [smallflycar](https://github.com/smallflycar), for letting the desk draw images with a GPT subscription, no separate image API needed ([#9](https://github.com/woniuniuniu/dsh-media-desk/pull/9))
 - [cofftea114](https://github.com/cofftea114), for pointing out that the desk has no entry once another plugin takes over the left sidebar, and for showing how to mount it as a dsh-better-sidebar tab ([#10](https://github.com/woniuniuniu/dsh-media-desk/issues/10))
-- [Feahter](https://github.com/Feahter), for the plugin market index that makes the desk a one-click install from Discover, validation and tests included ([#11](https://github.com/woniuniuniu/dsh-media-desk/pull/11))
+- [Feahter](https://github.com/Feahter), for the plugin market index that makes the desk a one-click install from Discover, validation and tests included ([#11](https://github.com/woniuniuniu/dsh-media-desk/pull/11)), and for the built-in version check that flags new releases in the top bar and shows the current version in Settings ([#19](https://github.com/woniuniuniu/dsh-media-desk/pull/19))
 - [TerryWang9112 (Terry)](https://github.com/TerryWang9112), for adding Alibaba Cloud Bailian and Wan image generation, and for letting each draft skip images ([#12](https://github.com/woniuniuniu/dsh-media-desk/pull/12))
 - [ytzhangFTD](https://github.com/ytzhangFTD), for noticing that an idea's notes disappear inside the studio and pinpointing the missing render path ([#13](https://github.com/woniuniuniu/dsh-media-desk/issues/13))
 - [giuliano1101](https://github.com/giuliano1101), for finding that stats for the same post could be counted twice ([#15](https://github.com/woniuniuniu/dsh-media-desk/issues/15)) and that saving again overwrote hand edits in the export folder ([#16](https://github.com/woniuniuniu/dsh-media-desk/issues/16)), and for building a full take on multiple accounts, a CLI and MCP server, and version history that we're learning from ([#14](https://github.com/woniuniuniu/dsh-media-desk/pull/14))
+- [wmaly13](https://github.com/wmaly13), for spotting the off-centre Script / Article labels in the format switch and suggesting sub-ideas under an idea ([#18](https://github.com/woniuniuniu/dsh-media-desk/issues/18))
 
 [Issues](https://github.com/woniuniuniu/dsh-media-desk/issues) are always welcome. Every one gets read.
 

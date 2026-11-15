@@ -193,7 +193,7 @@ dsh plugin --profile desktop add dsh-media-desk
 dsh plugin --profile web add dsh-media-desk
 ```
 
-**2. 更新。** 有新版本时，插件页会显示可更新，点一下就行；用命令行装的重跑一次上面的命令。工作台自己也会查 npm 上的最新版本：有新版本时顶栏出现 `↑ v新版本号` 的小提示，设置底部能看到当前版本，点提示去 npm 页面看升级命令。想离线安装的话，也可以到 [Releases](https://github.com/woniuniuniu/dsh-media-desk/releases/latest) 下载 `dsh-media-desk-*.tgz`，把包名换成 `"file:$PWD/dsh-media-desk-版本号.tgz"`。
+**2. 更新。** 有新版本时，插件页会显示可更新，点一下就行；用命令行装的重跑一次上面的命令。工作台自己也会查 npm 上的最新版本（每小时最多一次，只读版本号）：有新版本时顶栏出现 `↑ v新版本号` 的小提示，设置底部能看到当前版本，点提示去 npm 页面看升级命令。想离线安装的话，也可以到 [Releases](https://github.com/woniuniuniu/dsh-media-desk/releases/latest) 下载 `dsh-media-desk-*.tgz`，把包名换成 `"file:$PWD/dsh-media-desk-版本号.tgz"`。
 
 **3. 打开。** 侧栏会出现「自媒体工作台」。第一次看到的都是示例数据，方便你先看看每个页面长什么样；点右上角「示例数据 · 清空」，换成自己的。
 
@@ -314,10 +314,11 @@ dsh plugin --profile web add dsh-media-desk
 - [dsh-agent-sixtyseven](https://github.com/dsh-agent-sixtyseven)：查清 Windows 上导入账号一直显示「还没装好 Monid」的两处根因，并修好了定位和调用（[#7](https://github.com/woniuniuniu/dsh-media-desk/issues/7)、[#8](https://github.com/woniuniuniu/dsh-media-desk/pull/8)）
 - [smallflycar](https://github.com/smallflycar)：让工作台可以直接用 GPT 订阅生图，不用再另配图片 API（[#9](https://github.com/woniuniuniu/dsh-media-desk/pull/9)）
 - [cofftea114](https://github.com/cofftea114)：指出左侧栏被别的插件接管后工作台没有入口，并给出挂到 dsh-better-sidebar 右侧栏的做法（[#10](https://github.com/woniuniuniu/dsh-media-desk/issues/10)）
-- [Feahter](https://github.com/Feahter)：做了插件市场索引，粘一条地址就能在「发现」里一键安装，还带上了校验和测试（[#11](https://github.com/woniuniuniu/dsh-media-desk/pull/11)）
+- [Feahter](https://github.com/Feahter)：做了插件市场索引，粘一条地址就能在「发现」里一键安装，还带上了校验和测试（[#11](https://github.com/woniuniuniu/dsh-media-desk/pull/11)；又加了版本自查，有新版本时顶栏会提示，设置里能看到当前版本（[#19](https://github.com/woniuniuniu/dsh-media-desk/pull/19)）
 - [TerryWang9112（Terry）](https://github.com/TerryWang9112)：接入阿里云百炼和万相生图，并让每次成稿可以选择只出文字、不画图（[#12](https://github.com/woniuniuniu/dsh-media-desk/pull/12)）
 - [ytzhangFTD（小虾米）](https://github.com/ytzhangFTD)：发现灵感的正文进了成稿工作区就看不到，并定位到是哪一处没有渲染（[#13](https://github.com/woniuniuniu/dsh-media-desk/issues/13)）
 - [giuliano1101](https://github.com/giuliano1101)：查出同一篇内容的数据会被重复计算（[#15](https://github.com/woniuniuniu/dsh-media-desk/issues/15)）、再次保存成稿会冲掉文件夹里手改的稿子（[#16](https://github.com/woniuniuniu/dsh-media-desk/issues/16)），还完整做了一版多账号、命令行与 MCP、版本历史的方案供参考（[#14](https://github.com/woniuniuniu/dsh-media-desk/pull/14)）
+- [wmaly13](https://github.com/wmaly13)：发现体裁的「脚本 / 文章」文字没有居中，还提出在一条灵感下面挂子灵感的想法（[#18](https://github.com/woniuniuniu/dsh-media-desk/issues/18)）
 
 欢迎大家继续[提 issue](https://github.com/woniuniuniu/dsh-media-desk/issues)，每一条都会认真看。
 
