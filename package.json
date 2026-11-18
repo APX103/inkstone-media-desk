@@ -35,7 +35,7 @@
     "type": "git",
     "url": "git+https://github.com/woniuniuniu/dsh-media-desk.git"
   },
-  "homepage": "https://github.com/woniuniuniu/dsh-media-desk#readme",
+  "homepage": "https://bozhufarm.com/dsh/",
   "bugs": "https://github.com/woniuniuniu/dsh-media-desk/issues",
   "scripts": {
     "build": "node scripts/build.mjs",

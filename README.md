@@ -12,6 +12,7 @@
 <p align="center">由小红书科技博主 <a href="https://www.xiaohongshu.com/user/profile/5faedce8000000000101c8a3"><b>蜗牛的科技笔记</b></a> 开发，一个每天要发内容的人，给自己做的工作台。</p>
 
 <p align="center">
+  <a href="https://bozhufarm.com/dsh/"><b>介绍页和安装方法</b></a> ·
   <a href="#三步上手">安装</a> ·
   <a href="#要花钱吗">要花钱吗</a> ·
   <a href="#问答">问答</a> ·
