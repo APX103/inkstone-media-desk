@@ -31,7 +31,7 @@ body{margin:0;background:var(--bg);color:var(--ink);
   font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang SC","HarmonyOS Sans SC","Microsoft YaHei","Noto Sans SC",sans-serif;
   -webkit-font-smoothing:antialiased}
 a{color:inherit}
-img{max-width:100%;display:block}
+img{max-width:100%;height:auto;display:block}
 .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
 code,.mono{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
 
@@ -132,7 +132,7 @@ details .cmd{margin-top:10px;box-shadow:none}
 /* 博主农场 */
 .farm{display:grid;grid-template-columns:150px 1fr;gap:28px;align-items:center;background:var(--card);
   border:1px solid var(--line);border-radius:22px;padding:28px}
-.farm img{border-radius:16px}
+.farm img{border-radius:16px;width:100%;aspect-ratio:1/1;object-fit:cover}
 .farm h3{margin:0 0 6px;font-size:22px}
 .farm p{margin:0;color:var(--soft)}
 
