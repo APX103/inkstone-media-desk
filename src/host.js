@@ -454,8 +454,11 @@ async function route(ctx, store, desk, req, res) {
  */
 export function requestRejection(ctx, req) {
   const connection = ctx.get('connection')
-  if (typeof connection?.requestRejection !== 'function') return 403
-  return connection.requestRejection({ headers: req.headers })
+  // 上游 #8266 起 requestRejection 换成 admit：给 {rejection} 是拒，给 {peer} 是放行。
+  if (typeof connection?.admit === 'function') return connection.admit({ headers: req.headers })?.rejection
+  // 旧版 harness（0.2.1-rc.5 ~ #8266 之前）还是 requestRejection：返回状态码或 undefined。
+  if (typeof connection?.requestRejection === 'function') return connection.requestRejection({ headers: req.headers })
+  return 403
 }
 
 export const name = 'inkstone-media-desk'

@@ -165,6 +165,12 @@ test('computeInsights 汇总与逐日数据一致', () => {
 test('requestRejection 没有鉴权服务时拒绝，有服务时听它的', () => {
   const req = { headers: { cookie: 'x' } }
   assert.equal(requestRejection({ get: () => undefined }, req), 403)
+  // 新接口（上游 #8266 之后的 admit）：{rejection} 是拒，{peer} 是放行
+  let admitted = null
+  assert.equal(requestRejection({ get: () => ({ admit: (r) => { admitted = r; return { rejection: 401 } } }) }, req), 401)
+  assert.equal(admitted.headers, req.headers)
+  assert.equal(requestRejection({ get: () => ({ admit: () => ({ peer: {} }) }) }, req), undefined)
+  // 旧接口（0.2.1-rc.5 ~ #8266 之前的 requestRejection）：返回状态码或 undefined
   assert.equal(requestRejection({ get: () => ({ requestRejection: () => 401 }) }, req), 401)
   let seen = null
   const allowed = requestRejection({ get: () => ({ requestRejection: (r) => { seen = r; return undefined } }) }, req)
