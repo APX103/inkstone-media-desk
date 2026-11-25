@@ -5,7 +5,7 @@ import { tr } from './i18n.js'
 
 const DEFAULTS = {
   image: { source: 'http', protocol: 'openai', baseUrl: '', model: '', apiKey: '', size: '1536x1024', quality: '', toolSize: '1536x1024', toolQuality: '', extra: '' },
-  // 助手文字模型：空对象表示跟随 DeepSeek Harness 默认模型
+  // 助手文字模型：空对象表示跟随 端砚 默认模型
   assistant: { provider: '', model: '' },
   voice: '',
   exportDir: '',

@@ -7,37 +7,30 @@
 
 <h1 align="center">自媒体工作台</h1>
 
-<p align="center"><b>DeepSeek Harness 的一个插件。记一句灵感，一键做出脚本、封面、配图和分镜。</b></p>
+<p align="center"><b>端砚 Inkstone（DeepSeek Harness 社区分支）的一个插件。记一句灵感，一键做出脚本、封面、配图和分镜。</b></p>
 
-<p align="center">由小红书科技博主 <a href="https://www.xiaohongshu.com/user/profile/5faedce8000000000101c8a3"><b>蜗牛的科技笔记</b></a> 开发，一个每天要发内容的人，给自己做的工作台。</p>
+<p align="center">原版由小红书科技博主 <a href="https://www.xiaohongshu.com/user/profile/5faedce8000000000101c8a3"><b>蜗牛的科技笔记</b></a> 开发；本分支（<code>inkstone-media-desk</code>）面向端砚 Inkstone 的 SSO 登录与墨点额度体系做了适配。</p>
 
 <p align="center">
-  <a href="https://bozhufarm.com/dsh/"><b>介绍页和安装方法</b></a> ·
-  <a href="#三步上手">安装</a> ·
+  <a href="#三步上手"><b>安装</b></a> ·
   <a href="#要花钱吗">要花钱吗</a> ·
   <a href="#问答">问答</a> ·
   <a href="README.en.md">English</a>
 </p>
 
 <p align="center">
-  <img alt="DeepSeek Harness 0.2.x" src="https://img.shields.io/badge/DeepSeek%20Harness-0.2.x-111?style=flat-square">
+  <img alt="端砚 Inkstone · DSH 0.2.x" src="https://img.shields.io/badge/%E7%AB%AF%E7%A0%9A%20Inkstone%C2%B7DSH-0.2.x-111?style=flat-square">
   <img alt="Mac 桌面版与网页版" src="https://img.shields.io/badge/Mac%20%E6%A1%8C%E9%9D%A2%E7%89%88-%E7%BD%91%E9%A1%B5%E7%89%88-111?style=flat-square">
   <a href="LICENSE"><img alt="MIT" src="https://img.shields.io/badge/MIT-%E5%BC%80%E6%BA%90-111?style=flat-square"></a>
-  <a href="https://github.com/woniuniuniu/dsh-media-desk/stargazers"><img alt="Star" src="https://img.shields.io/github/stars/woniuniuniu/dsh-media-desk?style=flat-square&color=111&label=Star"></a>
+  <a href="https://github.com/APX103/inkstone-media-desk/stargazers"><img alt="Star" src="https://img.shields.io/github/stars/APX103/inkstone-media-desk?style=flat-square&color=111&label=Star"></a>
 </p>
-
-<br>
-
 <table>
 <tr>
-<td width="24%" align="center">
-  <a href="https://bozhufarm.com"><img src="docs/assets/bozhufarm-woo.webp" width="100%" alt="博主农场的农民蜗"></a>
-</td>
 <td valign="top">
-<h3>想用满血版？来博主农场</h3>
-<p>这个插件目前还是实验项目，是跟着 DeepSeek Harness 的生态做的。</p>
-<p>如果你想体验更多不同的模型，用原汁原味的满血版，可以来 <a href="https://bozhufarm.com"><b>博主农场</b></a>。写内容的模型已经帮你配好，生图模型也配好了，封面一键就能画。不用自己找密钥、配接口，打开就能做内容。</p>
-<p><a href="https://bozhufarm.com"><b>打开 bozhufarm.com →</b></a></p>
+<h3>这是端砚 Inkstone 的 fork 版</h3>
+<p>上游项目 <a href="https://github.com/woniuniuniu/dsh-media-desk"><b>dsh-media-desk</b></a> 面向官方 DeepSeek Harness 的登录与模型接入；本分支改为适配 <b>端砚 Inkstone</b>：账号走 SSO 登录，文字模型走平台网关，消耗按墨点（Token Plan）额度计。</p>
+<p>文字模型不需要任何配置——装好就用端砚的默认模型；生图仍由你自己填 OpenAI 兼容的图片 API（或百炼/万相），与登录方式无关。</p>
+<p>想用上游原版（官方 DeepSeek Harness + 博主农场），去 <a href="https://github.com/woniuniuniu/dsh-media-desk">woniuniuniu/dsh-media-desk</a>。</p>
 </td>
 </tr>
 </table>
@@ -46,9 +39,9 @@
 
 ## 它是什么
 
-装在 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 侧栏里的一个页面。打开是一面灵感墙，一句话记一个灵感；点开任何一条，一键生成口播脚本、标题、视频封面、配图和黑白线稿分镜；左边聊一句，右边就改。做好的稿子拖到日历上排期，发布之后回来看数据。
+装在端砚 Inkstone（[DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 社区分支）侧栏里的一个页面。打开是一面灵感墙，一句话记一个灵感；点开任何一条，一键生成口播脚本、标题、视频封面、配图和黑白线稿分镜；左边聊一句，右边就改。做好的稿子拖到日历上排期，发布之后回来看数据。
 
-五个页面：**灵感 · 内容 · 排期 · 复盘 · 风格**。界面有中文和英文，默认跟随 DeepSeek Harness 的语言，也可以在插件设置里固定；切到英文后，脚本、标题和分镜也用英文写。网页版在手机浏览器里也能打开。
+五个页面：**灵感 · 内容 · 排期 · 复盘 · 风格**。界面有中文和英文，默认跟随端砚的语言，也可以在插件设置里固定；切到英文后，脚本、标题和分镜也用英文写。网页版在手机浏览器里也能打开。
 
 除了小红书、抖音、B 站、公众号，也支持 TikTok、Instagram、YouTube 和 X，发海外也能用。
 
@@ -129,7 +122,7 @@
 <td valign="top" width="38%">
 <p><b>数据进来，规则出去。</b></p>
 <p>手动录入、粘贴 CSV，或者导入你自己的账号。趋势、平台分布、表现最好的内容，一眼看完。</p>
-<p>从数据里提炼出来的建议，点一下就写进写作规则，以后每篇都遵守。规则还能导出成 DeepSeek Harness 的 Skill。</p>
+<p>从数据里提炼出来的建议，点一下就写进写作规则，以后每篇都遵守。规则还能导出成端砚的 Skill。</p>
 </td>
 <td>
   <picture>
@@ -166,67 +159,53 @@
 
 ## 三步上手
 
-要求 DeepSeek Harness `0.2.1-rc.5` 及以上的 `0.2.x`，已在 `0.2.2-rc.1` 的桌面版和网页版上测过。
+要求端砚 Inkstone `0.2.1-rc.5` 及以上的 `0.2.x`（插件规范沿自 DeepSeek Harness）。上游原版在官方 DSH `0.2.2-rc.1` 上测过；本分支的目标环境是端砚 `0.2.2-rc.4`。如果端砚里已经有 InkStone 插件市场，直接在市场里搜「自媒体工作台」安装；没有的话走下面的自定义索引。
 
-**1. 安装。** 打开 DeepSeek Harness 侧栏的「插件」，先打开实验性的索引功能：DSH `0.2.2` 及以上在「实验性插件」下启用「自定义插件索引」；`0.2.1` 系列里它叫「自定义插件市场」，在「实验性插件」旁的「更多」里。打开后页面会多出「已安装」和「发现」两个标签。
+**1. 安装。** 打开端砚侧栏的「插件」，先打开实验性的索引功能：DSH `0.2.2` 及以上在「实验性插件」下启用「自定义插件索引」；`0.2.1` 系列里它叫「自定义插件市场」，在「实验性插件」旁的「更多」里。打开后页面会多出「已安装」和「发现」两个标签。
 
 切到「发现」，添加这条索引地址（加一次就够）：
 
 ```
-https://raw.githubusercontent.com/woniuniuniu/dsh-media-desk/main/index.json
+https://raw.githubusercontent.com/APX103/inkstone-media-desk/main/index.json
 ```
 
 GitHub 直连不通时，换成这个 CDN 镜像，代价是它最多可能比最新发布晚 12 小时：
 
 ```
-https://cdn.jsdelivr.net/gh/woniuniuniu/dsh-media-desk@main/index.json
+https://cdn.jsdelivr.net/gh/APX103/inkstone-media-desk@main/index.json
 ```
 
-列表里会出现「自媒体工作台」，点安装即可。它装的就是同一个 npm 包 `dsh-media-desk`，索引只是省掉手输包名这一步。
+列表里会出现「自媒体工作台」，点安装即可。它装的是 npm 包 `inkstone-media-desk`，索引只是省掉手输包名这一步。
 
-不想加索引，也可以在「插件」→「添加插件」里输入包名 `dsh-media-desk` 点安装，或者用命令行。桌面版要先完全退出（⌘Q）再装，装好重新打开；网页版装好后重启 `dsh web`。终端里没有 `dsh` 的话，先在桌面版菜单里选「管理 dsh 命令」。
+不想加索引，也可以在「插件」→「添加插件」里输入包名 `inkstone-media-desk` 点安装，或者用命令行。桌面版要先完全退出（⌘Q）再装，装好重新打开；网页版装好后重启 `dsh web`。终端里没有 `dsh` 的话，先在桌面版菜单里选「管理 dsh 命令」。
 
 ```bash
-dsh plugin --profile desktop add dsh-media-desk
+dsh plugin --profile desktop add inkstone-media-desk
 ```
 
 ```bash
-dsh plugin --profile web add dsh-media-desk
+dsh plugin --profile web add inkstone-media-desk
 ```
 
-**2. 更新。** 有新版本时，插件页会显示可更新，点一下就行；用命令行装的重跑一次上面的命令。工作台自己也会查 npm 上的最新版本（每小时最多一次，只读版本号）：有新版本时顶栏出现 `↑ v新版本号` 的小提示，设置底部能看到当前版本，点提示去 npm 页面看升级命令。想离线安装的话，也可以到 [Releases](https://github.com/woniuniuniu/dsh-media-desk/releases/latest) 下载 `dsh-media-desk-*.tgz`，把包名换成 `"file:$PWD/dsh-media-desk-版本号.tgz"`。
+**2. 更新。** 有新版本时，插件页会显示可更新，点一下就行；用命令行装的重跑一次上面的命令。工作台自己也会查 npm 上的最新版本（每小时最多一次，只读版本号）：有新版本时顶栏出现 `↑ v新版本号` 的小提示，设置底部能看到当前版本，点提示去 npm 页面看升级命令。想离线安装的话，也可以到 [Releases](https://github.com/APX103/inkstone-media-desk/releases/latest) 下载 `inkstone-media-desk-*.tgz`，把包名换成 `"file:$PWD/inkstone-media-desk-版本号.tgz"`。
 
 **3. 打开。** 侧栏会出现「自媒体工作台」。第一次看到的都是示例数据，方便你先看看每个页面长什么样；点右上角「示例数据 · 清空」，换成自己的。
 
-卸载时把 `add` 换成 `remove dsh-media-desk`。你的内容一直在 `~/.dsh/media-desk/`，不会跟着删。
+卸载时把 `add` 换成 `remove inkstone-media-desk`。你的内容一直在 `~/.dsh/inkstone-media-desk/`，不会跟着删。
 
 <br>
 
 ## 要花钱吗
 
-插件本身免费开源，不带任何密钥。用到模型的地方，走你自己的账号。
+插件本身免费开源，不带任何密钥。写到模型的地方，走你端砚账号的墨点（Token Plan）额度。
 
 | | 用什么 | 不接会怎样 |
 | --- | --- | --- |
-| **写脚本** | DeepSeek Harness 里你已经配好的模型 | 只能出结构草稿 |
-| **画封面、配图、分镜** | 自己的生图 API Key，或 DSH 已注册的订阅生图工具，在插件设置里选 | 脚本和分镜文案照常，封面变成纯文字版 |
+| **写脚本** | 端砚里已经配好的模型：SSO 登录后自动可用，按墨点额度计 | 只能出结构草稿 |
+| **画封面、配图、分镜** | 自己的生图 API Key，在插件设置里填 | 脚本和分镜文案照常，封面变成纯文字版 |
 | **导入自己的账号**（可选） | 第三方服务 Monid，按次计费：小红书一个账号约 0.02 美元（一毛多），抖音、B 站、TikTok、Instagram、X 不到 1 美分 | 手动录数据，或贴内容提炼风格 |
 
 生图支持 OpenAI 兼容图片接口（`POST {接口地址}/images/generations`），也支持阿里云百炼：千问图像走同步接口，万相 2.5 及以下走异步任务接口。设置里预填了 OpenAI、xAI、火山方舟、智谱、硅基流动、阿里云百炼、百炼 Token Plan 和百炼万相（异步），也可以自定义。填好点「试画一张」就知道通没通。一次成稿默认 9 张图，数量可调；也可以在「一键成稿」前取消「生成图片」，这次只出文字版，之后仍能单张补画。密钥只存在本机的 `settings.json`，权限 600，不进内容数据，也不会发给文字模型。
-
-<br>
-
-### 使用 DSH 生成工具
-
-复用插件接入 DSH 的订阅生图能力。例如，插件已让你通过 ChatGPT（GPT）订阅在 DSH 中生成图片，工作台就可复用，无需另填图片 API Key。其他国内外服务的订阅也需由插件接入生图功能，并在工作台适配范围内；仅登录订阅或接入聊天模型并不代表支持生图。当前适配 `dsh-plugin-subscriptions`，使用的服务、账号及回退规则由该插件决定。
-
-在设置中将「生图来源」切换到「DSH 生成工具」，可以复用 `dsh-plugin-subscriptions` 注册的 `image_generate`（含其同名冲突别名）。不需要再填 API Key；原来的 HTTP 配置（含尺寸、质量）会保留，工具的尺寸、质量单独设置，默认来源仍是图片 API。检测只确认兼容工具已注册且默认执行器公布了直接调用入口，不保证账号登录或额度；点「试画一张」会发起真实请求并消耗订阅额度。名称和参数校验不是插件身份认证，请只启用可信的工具插件。
-
-需要宿主支持 `tools.executable()`、`tools.selectExecutor().describe()` 和独立服务的 `tools.execute()` 批量调用（已核对 DSH 0.2.2-rc.1 公共接口）。工作台通过宿主执行管线调用工具，不读取订阅凭证、不依赖订阅插件内部模块。输出仅导入 DSH 主目录 `plugins/subscriptions/images/` 内的图片，然后沿用工作台原有保存/展示流程。当前仅识别 `dsh_subscriptions_image_generate` 和 `image_generate`，不扫描任意名称的工具；其他插件即便使用同名工具，也仍需匹配参数、返回结构与输出目录。仅注册在某个 Agent 私有作用域中的工具不可用。
-
-这是工作台的独立后台操作，不继承当前聊天会话的权限、历史开关或账号偏好；宿主全局工具策略与订阅插件当前开关仍生效。需要人工审批但没有可用会话时，宿主会拒绝调用。工具使用自己的默认提供方、账号选择及回退规则（例如 ChatGPT 未登录时可能使用 Grok），工作台不会在失败后自动换到 HTTP，也不额外重试工具请求。
-
-当前纯 Code Mode / PTC 执行器不接受直接的根生图工具调用，会被检测为不可用；请使用支持直接调用的原生工具执行器或保留 HTTP 生图。未安装工具或旧宿主不支持上述接口时，原有 HTTP 功能不受影响。
 
 ## 导入自己的账号
 
@@ -234,7 +213,7 @@ dsh plugin --profile web add dsh-media-desk
 
 第一次用要接 [Monid](https://monid.ai)，三步：
 
-1. 把 `set up https://monid.ai/SKILL.md` 发给 DeepSeek Harness 的新会话，它会装好。
+1. 把 `set up https://monid.ai/SKILL.md` 发给端砚的新会话，它会装好。
 2. 到 [app.monid.ai](https://app.monid.ai/access/api-keys) 注册，创建密钥。
 3. 在终端执行 `monid keys add -k 你的密钥 -l main`。密钥别发在聊天里。
 
@@ -264,7 +243,7 @@ dsh plugin --profile web add dsh-media-desk
 <summary><b>我的东西存在哪？</b></summary>
 <br>
 
-全在本机 `~/.dsh/media-desk/`，桌面版和网页版共用。没有云端，没有账号系统。
+全在本机 `~/.dsh/inkstone-media-desk/`，桌面版和网页版共用。没有云端，没有账号系统。
 
 </details>
 
@@ -288,7 +267,7 @@ dsh plugin --profile web add dsh-media-desk
 <summary><b>这是 DeepSeek 做的吗？</b></summary>
 <br>
 
-不是，是社区插件。脚本由你在 DeepSeek Harness 里配置的模型生成，按你自己的账户计费。
+不是，是社区插件。脚本由端砚里配置好的模型生成，按你的端砚墨点额度计费；生图按你自己的图片 API 计费。上游原版见 [woniuniuniu/dsh-media-desk](https://github.com/woniuniuniu/dsh-media-desk)。
 
 </details>
 
@@ -296,7 +275,9 @@ dsh plugin --profile web add dsh-media-desk
 
 ## 作者
 
-我是 [蜗牛的科技笔记](https://www.xiaohongshu.com/user/profile/5faedce8000000000101c8a3)，在小红书做科技内容，小红书号 `1097519508`。这个工作台是我自己每天用的：灵感记不住、成稿太慢、发完不知道效果，这三件事我都踩过，所以做成了这样。用得顺手或者不顺手，欢迎提 [Issue](https://github.com/woniuniuniu/dsh-media-desk/issues)，也欢迎来小红书找我聊。
+我是 [蜗牛的科技笔记](https://www.xiaohongshu.com/user/profile/5faedce8000000000101c8a3)，在小红书做科技内容，小红书号 `1097519508`。这个工作台是我自己每天用的：灵感记不住、成稿太慢、发完不知道效果，这三件事我都踩过，所以做成了这样。
+
+这个仓库是它的**端砚 Inkstone fork**：把登录与模型接入适配到端砚的 SSO 和墨点额度。上游原版的功能、问答和更新都在 [woniuniuniu/dsh-media-desk](https://github.com/woniuniuniu/dsh-media-desk)；fork 相关的问题到 [本仓库 Issue](https://github.com/APX103/inkstone-media-desk/issues) 提。
 
 ## 致谢
 
@@ -321,7 +302,7 @@ dsh plugin --profile web add dsh-media-desk
 - [giuliano1101](https://github.com/giuliano1101)：查出同一篇内容的数据会被重复计算（[#15](https://github.com/woniuniuniu/dsh-media-desk/issues/15)）、再次保存成稿会冲掉文件夹里手改的稿子（[#16](https://github.com/woniuniuniu/dsh-media-desk/issues/16)），还完整做了一版多账号、命令行与 MCP、版本历史的方案供参考（[#14](https://github.com/woniuniuniu/dsh-media-desk/pull/14)）
 - [wmaly13](https://github.com/wmaly13)：发现体裁的「脚本 / 文章」文字没有居中，还提出在一条灵感下面挂子灵感的想法（[#18](https://github.com/woniuniuniu/dsh-media-desk/issues/18)）
 
-欢迎大家继续[提 issue](https://github.com/woniuniuniu/dsh-media-desk/issues)，每一条都会认真看。
+欢迎大家继续[提 issue](https://github.com/APX103/inkstone-media-desk/issues)（fork 相关）或到上游 [woniuniuniu/dsh-media-desk](https://github.com/woniuniuniu/dsh-media-desk/issues) 反馈（通用功能），每一条都会认真看。
 
 ### 贡献者
 

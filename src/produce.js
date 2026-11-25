@@ -259,7 +259,7 @@ export class Producer {
           if (signal.aborted) throw err
           markdown = fallbackArticle(snapshot, item)
           job.text = markdown
-          notice = tr('没有连上文字模型，先给你一份结构草稿。可以到 DeepSeek Harness 设置里检查模型。')
+          notice = tr('没有连上文字模型，先给你一份结构草稿。可以到 端砚 设置里检查模型。')
         }
         const { article } = splitTitle(markdown, plan.title)
         await this.patch(id, (production) => {
@@ -342,7 +342,7 @@ export class Producer {
         const asset = assetAt(production, target)
         if (!asset) return
         asset.status = 'done'
-        asset.src = `media-desk/files/${name}`
+        asset.src = `inkstone-media-desk/files/${name}`
       })
     } catch (err) {
       if (signal?.aborted) return

@@ -208,7 +208,7 @@ export const EN = {
   '改了第 {no} 镜的文案': 'Changed the text of shot {no}',
   找不到这条灵感: 'Can\'t find this idea',
   模型返回了空内容: 'The model returned nothing',
-  '没有连上文字模型，先给你一份结构草稿。可以到 DeepSeek Harness 设置里检查模型。': 'No text model is connected, so here\'s an outline to start from. Check the model in DeepSeek Harness settings.',
+  '没有连上文字模型，先给你一份结构草稿。可以到端砚设置里检查模型。': 'No text model is connected, so here\'s an outline to start from. Check the model in Inkstone settings.',
   还没有接入生图模型: 'No image model is connected yet',
   目标无效: 'Invalid target',
   找不到这张图: 'Can\'t find this image',

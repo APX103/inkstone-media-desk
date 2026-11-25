@@ -1,4 +1,4 @@
-// 界面语言：中文写在代码里，英文按中文原文查表。跟随 DeepSeek Harness 的语言，设置里也能固定成中文或 English。
+// 界面语言：中文写在代码里，英文按中文原文查表。跟随 端砚 的语言，设置里也能固定成中文或 English。
 import React from 'react'
 import { EN } from './en/index.js'
 

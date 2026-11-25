@@ -7,9 +7,9 @@
 
 <h1 align="center">Media Desk</h1>
 
-<p align="center"><b>A DeepSeek Harness plugin. Capture an idea, and one click drafts the script, cover, images and storyboard.</b></p>
+<p align="center"><b>A plugin for Inkstone (端砚), a DeepSeek Harness community fork. Capture an idea, and one click drafts the script, cover, images and storyboard.</b></p>
 
-<p align="center">Built by <a href="https://www.xiaohongshu.com/user/profile/5faedce8000000000101c8a3"><b>蜗牛的科技笔记</b></a> (Snail's Tech Notes), a tech creator on RedNote, as the desk behind their own daily posts.</p>
+<p align="center">The original was built by <a href="https://www.xiaohongshu.com/user/profile/5faedce8000000000101c8a3"><b>蜗牛的科技笔记</b></a> (Snail's Tech Notes), a tech creator on RedNote, as the desk behind their own daily posts. This fork (<code>inkstone-media-desk</code>) adapts it to Inkstone's SSO sign-in and Token Plan (墨点) credits.</p>
 
 <p align="center">
   <a href="#get-started">Install</a> ·
@@ -19,19 +19,19 @@
 </p>
 
 <p align="center">
-  <img alt="DeepSeek Harness 0.2.x" src="https://img.shields.io/badge/DeepSeek%20Harness-0.2.x-111?style=flat-square">
+  <img alt="Inkstone · DSH 0.2.x" src="https://img.shields.io/badge/Inkstone%C2%B7DSH-0.2.x-111?style=flat-square">
   <img alt="Mac desktop and web" src="https://img.shields.io/badge/Mac%20desktop-web-111?style=flat-square">
   <a href="LICENSE"><img alt="MIT" src="https://img.shields.io/badge/MIT-open%20source-111?style=flat-square"></a>
-  <a href="https://github.com/woniuniuniu/dsh-media-desk/stargazers"><img alt="Star" src="https://img.shields.io/github/stars/woniuniuniu/dsh-media-desk?style=flat-square&color=111&label=Star"></a>
+  <a href="https://github.com/APX103/inkstone-media-desk/stargazers"><img alt="Star" src="https://img.shields.io/github/stars/APX103/inkstone-media-desk?style=flat-square&color=111&label=Star"></a>
 </p>
 
 <br>
 
 ## What it is
 
-Media Desk is a page in the [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) sidebar. It opens on a wall of your ideas, one line each. Open one, click **Draft it**, and you get a spoken script, a title, a video cover, images and a six-frame storyboard. Ask for changes in the chat on the left and the draft updates on the right. Then drag the finished piece onto the calendar, publish it, and come back for the numbers.
+Media Desk is a page in the Inkstone (端砚) sidebar — Inkstone being a [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) community fork. It opens on a wall of your ideas, one line each. Open one, click **Draft it**, and you get a spoken script, a title, a video cover, images and a six-frame storyboard. Ask for changes in the chat on the left and the draft updates on the right. Then drag the finished piece onto the calendar, publish it, and come back for the numbers.
 
-There are five pages: **Ideas · Content · Schedule · Insights · Styles**. The interface is available in English and Chinese. By default it follows the DeepSeek Harness language, and you can lock it to either one in the plugin settings. When the interface is in English, scripts, titles and storyboards are written in English. The web version also works in a phone browser.
+There are five pages: **Ideas · Content · Schedule · Insights · Styles**. The interface is available in English and Chinese. By default it follows the Inkstone language, and you can lock it to either one in the plugin settings. When the interface is in English, scripts, titles and storyboards are written in English. The web version also works in a phone browser.
 
 It works with TikTok, Instagram, YouTube and X as well as Chinese platforms (RedNote, Douyin, Bilibili, WeChat).
 
@@ -112,7 +112,7 @@ It works with TikTok, Instagram, YouTube and X as well as Chinese platforms (Red
 <td valign="top" width="38%">
 <p><b>See what worked, and keep doing it.</b></p>
 <p>Enter numbers by hand, paste a CSV, or import your own account. You'll see daily views, a breakdown by platform and your top pieces in one place.</p>
-<p>Turn a suggestion into a writing rule with one click and it applies to everything you write next. Rules can be exported as a DeepSeek Harness skill.</p>
+<p>Turn a suggestion into a writing rule with one click and it applies to everything you write next. Rules can be exported as an Inkstone skill.</p>
 </td>
 <td>
   <picture>
@@ -150,51 +150,51 @@ It works with TikTok, Instagram, YouTube and X as well as Chinese platforms (Red
 <a id="get-started"></a>
 ## Get started
 
-Requires DeepSeek Harness `0.2.1-rc.5` or later in the `0.2.x` line. Tested on `0.2.2-rc.1`, desktop and web.
+Requires Inkstone `0.2.1-rc.5` or later in the `0.2.x` line (the plugin spec follows DeepSeek Harness). The upstream original was tested on official DSH `0.2.2-rc.1`, desktop and web; this fork targets Inkstone `0.2.2-rc.4`. If your Inkstone ships the InkStone Plugin Hub, install from there; otherwise use the custom index below.
 
-**1. Install.** Open **Plugins** in the DeepSeek Harness sidebar and switch on the experimental index support: on DSH `0.2.2` and later it is **Custom plugin indexes** under **Experimental plugins**; on the `0.2.1` line it is **Custom plugin markets**, under **More** beside **Experimental plugins**. The page then shows the **Installed** and **Discover** tabs.
+**1. Install.** Open **Plugins** in the Inkstone sidebar and switch on the experimental index support: on DSH `0.2.2` and later it is **Custom plugin indexes** under **Experimental plugins**; on the `0.2.1` line it is **Custom plugin markets**, under **More** beside **Experimental plugins**. The page then shows the **Installed** and **Discover** tabs.
 
 Switch to **Discover** and add this index URL — once is enough:
 
 ```
-https://raw.githubusercontent.com/woniuniuniu/dsh-media-desk/main/index.json
+https://raw.githubusercontent.com/APX103/inkstone-media-desk/main/index.json
 ```
 
 If github.com is hard to reach from your network, use this CDN mirror instead — it can lag up to 12 hours behind the latest release:
 
 ```
-https://cdn.jsdelivr.net/gh/woniuniuniu/dsh-media-desk@main/index.json
+https://cdn.jsdelivr.net/gh/APX103/inkstone-media-desk@main/index.json
 ```
 
-**Media Desk** shows up in the list; install it from there. It installs the same `dsh-media-desk` npm package, the index just saves typing the package name.
+**Media Desk** shows up in the list; install it from there. It installs the `inkstone-media-desk` npm package, the index just saves typing the package name.
 
-Without the index, go to Plugins → Add plugin, enter `dsh-media-desk`, and install. You can also install from the command line. Quit the desktop app completely (⌘Q) first and reopen it afterwards. For the web version, restart `dsh web`. If the `dsh` command isn't available in your terminal, choose "Manage dsh command" from the desktop app's menu.
+Without the index, go to Plugins → Add plugin, enter `inkstone-media-desk`, and install. You can also install from the command line. Quit the desktop app completely (⌘Q) first and reopen it afterwards. For the web version, restart `dsh web`. If the `dsh` command isn't available in your terminal, choose "Manage dsh command" from the desktop app's menu.
 
 ```bash
-dsh plugin --profile desktop add dsh-media-desk
+dsh plugin --profile desktop add inkstone-media-desk
 ```
 
 ```bash
-dsh plugin --profile web add dsh-media-desk
+dsh plugin --profile web add inkstone-media-desk
 ```
 
-**2. Update.** When a new version comes out, the Plugins page shows an update — click it; a command-line install runs the same command again. Media Desk also checks npm itself (at most once an hour, reading only the version number): when a newer version exists the top bar shows `↑ vX.Y.Z`, Settings shows the version you are on, and the badge opens the npm page with the upgrade command. To install offline, download `dsh-media-desk-*.tgz` from [Releases](https://github.com/woniuniuniu/dsh-media-desk/releases/latest) and use `"file:$PWD/dsh-media-desk-VERSION.tgz"` in place of the package name.
+**2. Update.** When a new version comes out, the Plugins page shows an update — click it; a command-line install runs the same command again. Media Desk also checks npm itself (at most once an hour, reading only the version number): when a newer version exists the top bar shows `↑ vX.Y.Z`, Settings shows the version you are on, and the badge opens the npm page with the upgrade command. To install offline, download `inkstone-media-desk-*.tgz` from [Releases](https://github.com/APX103/inkstone-media-desk/releases/latest) and use `"file:$PWD/inkstone-media-desk-VERSION.tgz"` in place of the package name.
 
 **3. Open.** **Media Desk** appears in the sidebar. On first launch it's filled with sample data so you can explore every page. Click **Clear sample data** in the top right when you're ready to start with your own.
 
-To uninstall, replace `add` with `remove`. Your content stays in `~/.dsh/media-desk/`.
+To uninstall, replace `add` with `remove`. Your content stays in `~/.dsh/inkstone-media-desk/`.
 
 <br>
 
 <a id="what-it-costs"></a>
 ## What it costs
 
-The plugin is free and ships with no API keys. Anything that uses a model runs on your own accounts.
+The plugin is free and ships with no API keys. Anything that uses a model runs on your Inkstone account's Token Plan (墨点) credits.
 
 | | What it uses | Without it |
 | --- | --- | --- |
-| **Script** | The model you've set up in DeepSeek Harness | A structural outline only |
-| **Cover, images, storyboard** | Your image API key, or a registered DSH subscription image tool, selected in settings | Script and storyboard text still work, and the cover is made from text |
+| **Script** | The model already set up in Inkstone — available automatically after SSO sign-in, billed in 墨点 credits | A structural outline only |
+| **Cover, images, storyboard** | Your own image API key, entered in settings | Script and storyboard text still work, and the cover is made from text |
 | **Account import** (optional) | Monid, a third-party data service billed per request. Under a cent per TikTok, Instagram or X account; about $0.02 for RedNote | Enter numbers by hand, or paste posts to learn a style |
 
 Images work with any service compatible with the OpenAI Images API (`POST {endpoint}/images/generations`), and with Alibaba Bailian: Qwen-Image uses the sync endpoint, while Wan 2.5 and earlier use the async task API. OpenAI, xAI, Volcengine Ark, Zhipu, SiliconFlow, Alibaba Bailian, Bailian Token Plan and Bailian Wan (async) come pre-filled, or you can add a custom endpoint. Click **Generate test image** to check that it works. Each draft makes 9 images by default, and you can change that; you can also uncheck **Draw images** before **Draft it** to get text only this time, and draw individual images later. Your key is stored only in the local `settings.json` (file mode 600). It never goes into your content data and is never sent to the text model.
@@ -219,7 +219,7 @@ In Styles or Insights, click **Import account** and paste your profile link. Sup
 
 The first time, connect [Monid](https://monid.ai) in three steps:
 
-1. In a new DeepSeek Harness session, send `set up https://monid.ai/SKILL.md`. It installs the Monid command-line tool.
+1. In a new Inkstone session, send `set up https://monid.ai/SKILL.md`. It installs the Monid command-line tool.
 2. Sign up at [app.monid.ai](https://app.monid.ai/access/api-keys) and create an API key.
 3. In your terminal, run `monid keys add -k YOUR_KEY -l main`. Don't paste the key into a chat.
 
@@ -250,7 +250,7 @@ No. Platforms don't offer a common publishing API, so copy the script or save th
 <summary><b>Where is my data?</b></summary>
 <br>
 
-Everything stays on your computer in `~/.dsh/media-desk/`, shared by the desktop and web versions. No cloud and no sign-up.
+Everything stays on your computer in `~/.dsh/inkstone-media-desk/`, shared by the desktop and web versions. No cloud and no sign-up.
 
 </details>
 
@@ -274,7 +274,7 @@ No. Uncheck **Draw images** next to **Draft it** and that draft gets only the ti
 <summary><b>Is this made by DeepSeek?</b></summary>
 <br>
 
-No. It's a community plugin. Scripts are written by the model you've set up in DeepSeek Harness and billed to your own account.
+No. It's a community plugin. Scripts are written by the model already set up in Inkstone, billed to your Inkstone 墨点 (Token Plan) credits; image generation is billed by your own image API. The upstream original lives at [woniuniuniu/dsh-media-desk](https://github.com/woniuniuniu/dsh-media-desk).
 
 </details>
 
@@ -282,7 +282,9 @@ No. It's a community plugin. Scripts are written by the model you've set up in D
 
 ## About the author
 
-I'm [蜗牛的科技笔记](https://www.xiaohongshu.com/user/profile/5faedce8000000000101c8a3) (Snail's Tech Notes), a tech creator on RedNote (ID `1097519508`). I use this desk every day. It's built around three problems I kept running into: losing ideas, drafts that took too long, and never checking how posts did. Issues and ideas are welcome on [GitHub](https://github.com/woniuniuniu/dsh-media-desk/issues).
+I'm [蜗牛的科技笔记](https://www.xiaohongshu.com/user/profile/5faedce8000000000101c8a3) (Snail's Tech Notes), a tech creator on RedNote (ID `1097519508`). I use this desk every day. It's built around three problems I kept running into: losing ideas, drafts that took too long, and never checking how posts did.
+
+This repository is the **Inkstone fork** of that project, adapting sign-in and model access to Inkstone's SSO and 墨点 credits. The upstream original's features, FAQ and updates live at [woniuniuniu/dsh-media-desk](https://github.com/woniuniuniu/dsh-media-desk); fork-specific issues go to [this repository](https://github.com/APX103/inkstone-media-desk/issues).
 
 ## Thanks
 
@@ -338,10 +340,10 @@ npm pack                       # build the installable tgz
 | `assets/` | Sample images and videos, all generated by `scripts/gen-assets.py` |
 | `docs/assets/` | The images on this page |
 
-Restart DeepSeek Harness after changing `src/`.
+Restart Inkstone after changing `src/`.
 
-**Security:** Every route is authenticated by the host. Model output and fetched content are reduced to known fields with length limits, and only allow-listed operations run. Pasted links can't reach localhost or private networks. `monid` runs without a shell, and account IDs must match fixed formats. Please report vulnerabilities privately through [Security Advisories](https://github.com/woniuniuniu/dsh-media-desk/security/advisories/new).
+**Security:** Every route is authenticated by the host. Model output and fetched content are reduced to known fields with length limits, and only allow-listed operations run. Pasted links can't reach localhost or private networks. `monid` runs without a shell, and account IDs must match fixed formats. Please report vulnerabilities privately through [Security Advisories](https://github.com/APX103/inkstone-media-desk/security/advisories/new).
 
 <br>
 
-<p align="center"><sub><a href="LICENSE">MIT</a> · A community plugin, not affiliated with DeepSeek. DeepSeek Harness and its marks belong to their respective owners.</sub></p>
+<p align="center"><sub><a href="LICENSE">MIT</a> · A community plugin, not affiliated with DeepSeek. DeepSeek Harness, Inkstone and their marks belong to their respective owners.</sub></p>

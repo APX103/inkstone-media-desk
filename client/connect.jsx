@@ -44,7 +44,7 @@ function SetupGuide({ status, checking, onCheck }) {
       <p className="md-setup-lead">{t('小红书、抖音、B 站、TikTok、Instagram 和 X 的数据要通过 Monid 读取。它是第三方数据服务，按次收费，一个账号大约几分钱。')}</p>
       <ol>
         <li>
-          <strong>{t('把这句话发给 DeepSeek Harness 的新会话')}</strong>
+          <strong>{t('把这句话发给 端砚 的新会话')}</strong>
           <span>{t('它会帮你装好 Monid。')}</span>
           <CopyLine value={SETUP_LINE} label={t('复制安装指令')} />
         </li>

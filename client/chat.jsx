@@ -137,7 +137,7 @@ export function ChatDock() {
         head={(
           <>
             <h2>{t('助手')}</h2>
-            <span className={`md-engine ${!model ? '' : modelOk === false ? 'is-down' : 'is-live'}`} title={!model ? t('当前没有可用模型，只能处理常见说法') : modelOk === false ? `${t('模型 {model} 调用失败，现在只能处理常见说法。', { model })}${modelError ? `\n${modelError}` : ''}` : t('使用 DeepSeek Harness 当前模型 {model}', { model })}>
+            <span className={`md-engine ${!model ? '' : modelOk === false ? 'is-down' : 'is-live'}`} title={!model ? t('当前没有可用模型，只能处理常见说法') : modelOk === false ? `${t('模型 {model} 调用失败，现在只能处理常见说法。', { model })}${modelError ? `\n${modelError}` : ''}` : t('使用 端砚 当前模型 {model}', { model })}>
               <i />{!model ? t('本地规则') : modelOk === false ? t('模型调用失败') : model}
             </span>
             <span style={{ flex: 1 }} />

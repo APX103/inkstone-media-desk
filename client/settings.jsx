@@ -20,7 +20,7 @@ const PRESETS = [
 
 // 中文和 English 各用自己的语言写，切错了也认得出来
 const LANGUAGES = [
-  { value: 'auto', label: () => t('跟随 DeepSeek Harness') },
+  { value: 'auto', label: () => t('跟随 端砚') },
   { value: 'zh', label: () => '中文' },
   { value: 'en', label: () => 'English' },
 ]
@@ -37,7 +37,8 @@ export function SettingsDialog() {
   React.useEffect(() => {
     if (!open || !settings) return
     const { image } = settings
-    setForm({ source: image.source ?? 'http', protocol: image.protocol ?? 'openai', language: settings.language ?? 'auto', baseUrl: image.baseUrl, model: image.model, apiKey: '', size: image.size, quality: image.quality, toolSize: image.toolSize ?? '1536x1024', toolQuality: image.toolQuality ?? '', extra: image.extra, exportDir: settings.exportDir ?? '', generateImages: settings.generateImages !== false, imageCount: settings.imageCount, shotCount: settings.shotCount })
+    // 端砚 fork：不带订阅生图插件，来源固定为图片 API；保存的历史值也归一回 http。
+    setForm({ source: 'http', protocol: image.protocol ?? 'openai', language: settings.language ?? 'auto', baseUrl: image.baseUrl, model: image.model, apiKey: '', size: image.size, quality: image.quality, toolSize: image.toolSize ?? '1536x1024', toolQuality: image.toolQuality ?? '', extra: image.extra, exportDir: settings.exportDir ?? '', generateImages: settings.generateImages !== false, imageCount: settings.imageCount, shotCount: settings.shotCount })
     setSample(null)
   }, [open, settings])
   if (!open || !form) return null
@@ -71,7 +72,7 @@ export function SettingsDialog() {
         <div className="md-field">
           <span>{t('生图来源')}</span>
           <div className="md-presets" role="radiogroup" aria-label={t('生图来源')}>
-            {[['http', '图片 API'], ['tool', 'DSH 生成工具']].map(([value, label]) => <button type="button" key={value} role="radio" aria-checked={form.source === value} className={form.source === value ? 'is-on' : ''} onClick={() => set('source', value)}>{t(label)}</button>)}
+            {[['http', '图片 API']].map(([value, label]) => <button type="button" key={value} role="radio" aria-checked={form.source === value} className={form.source === value ? 'is-on' : ''} onClick={() => set('source', value)}>{t(label)}</button>)}
           </div>
           {form.source === 'tool' ? <>
             <small>{t(settings.imageToolAvailable ? '已检测到生图工具；账号登录和额度以试画结果为准。' : '未找到订阅生图工具，或默认执行器不支持直接调用；请检查插件和执行器后刷新工作台。')}</small>

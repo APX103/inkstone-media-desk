@@ -100,7 +100,7 @@ export const STUDIO = {
   '模型 {model} 调用失败，现在只能处理常见说法。': 'Calls to {model} are failing. Only basic commands work for now.',
   '模型 {model} 调用失败': 'Calls to {model} are failing',
   '模型调用失败': 'Model call failed',
-  '使用 DeepSeek Harness 当前模型 {model}': 'Using the current DeepSeek Harness model, {model}',
+  '使用端砚当前模型 {model}': 'Using the current Inkstone model, {model}',
   '模型未连接': 'Model offline',
   '清空对话': 'Clear chat',
   '收起对话': 'Hide chat',

@@ -1,4 +1,4 @@
-// 自我强化：从真实数据和你对草稿的修改里提炼规则，确认后才生效，并可导出成 DeepSeek Harness Skill。
+// 自我强化：从真实数据和你对草稿的修改里提炼规则，确认后才生效，并可导出成 端砚 Skill。
 import { mkdir, rm, writeFile } from 'node:fs/promises'
 import { join } from 'node:path'
 import { activeStyle, styleToVoice } from './style.js'
@@ -176,7 +176,7 @@ function slug(text, fallback) {
 }
 
 /**
- * 把生效中的规则写成一个 DeepSeek Harness 用户级 Skill（<home>/skills/<name>/SKILL.md）。
+ * 把生效中的规则写成一个 端砚 用户级 Skill（<home>/skills/<name>/SKILL.md）。
  * 内容由用户在界面确认后点击导出才写入。
  * @param {object} state - 当前状态。
  * @param {string} home - DSH_HOME。
@@ -187,7 +187,7 @@ export async function exportSkill(state, home) {
   const rules = state.skills.filter(skill => !skill.sample && (skill.status === 'active' || skill.status === 'exported'))
   const picked = activeStyle(state)
   const style = picked && !picked.preset ? picked : null
-  const name = 'media-desk-voice'
+  const name = 'inkstone-media-desk-voice'
   const dir = join(home, 'skills', name)
   if (!rules.length && !style) {
     // 之前导出过的旧 Skill 不再代表现在的设置，撤掉它
@@ -200,5 +200,5 @@ export async function exportSkill(state, home) {
   const ruleBlock = rules.length ? `## ${tr('必须遵守的规则')}\n\n${rules.map(r => `- **${r.name}**${tr('：')}${r.rule}${r.evidence ? tr('（依据：{evidence}）', { evidence: r.evidence }) : ''}`).join('\n')}\n` : ''
   const body = `---\nname: ${name}\ndescription: ${description}\n---\n\n# ${tr('自媒体写作风格')}\n\n${tr('由「自媒体工作台」沉淀，更新于 {date}。', { date: new Date().toISOString().slice(0, 10) })}\n\n${styleBlock}${ruleBlock}`
   await writeFile(join(dir, 'SKILL.md'), body)
-  return { name, path: join(dir, 'SKILL.md'), rules: rules.length, slug: slug(name, 'media-desk') }
+  return { name, path: join(dir, 'SKILL.md'), rules: rules.length, slug: slug(name, 'inkstone-media-desk') }
 }

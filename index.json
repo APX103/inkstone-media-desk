@@ -20,19 +20,19 @@
   },
   "plugins": [
     {
-      "name": "dsh-media-desk",
+      "name": "inkstone-media-desk",
       "title": {
         "en": "Media Desk",
         "zh": "自媒体工作台"
       },
       "description": {
-        "en": "Capture an idea in one sentence, then generate the spoken script, title, cover, illustrations, and line-art storyboards. A content workbench for DeepSeek Harness: idea wall, drafts, schedule, insights, and reusable style cards.",
-        "zh": "一句话记灵感，一键做出脚本、封面、配图和黑白线稿分镜。DeepSeek Harness 上的自媒体创作工作台：灵感墙、成稿、排期、复盘和专属风格卡。"
+        "en": "Capture an idea in one sentence, then generate the spoken script, title, cover, illustrations, and line-art storyboards. A content workbench for Inkstone, a DeepSeek Harness fork: idea wall, drafts, schedule, insights, and reusable style cards.",
+        "zh": "一句话记灵感，一键做出脚本、封面、配图和黑白线稿分镜。端砚 Inkstone 上的自媒体创作工作台：灵感墙、成稿、排期、复盘和专属风格卡。"
       },
       "author": "蜗牛的科技笔记",
-      "homepage": "https://github.com/woniuniuniu/dsh-media-desk#readme",
+      "homepage": "https://github.com/APX103/inkstone-media-desk#readme",
       "repository": {
-        "url": "https://github.com/woniuniuniu/dsh-media-desk"
+        "url": "https://github.com/APX103/inkstone-media-desk"
       },
       "metadata": {
         "category": "content-creation",

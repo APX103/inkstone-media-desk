@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>自媒体工作台 · DeepSeek Harness 插件</title>
-<meta name="description" content="自媒体工作台是 DeepSeek Harness 的一个插件：在里面记灵感，让它把灵感写成脚本，配上标题、封面、配图和分镜。这里有三种安装方法。">
-<meta property="og:title" content="自媒体工作台 · DeepSeek Harness 插件">
-<meta property="og:description" content="DeepSeek Harness 的一个插件，用来记灵感、写脚本、做封面和分镜。这里有三种安装方法。">
-<meta property="og:image" content="https://bozhufarm.com/dsh/assets/hero-zh-light.webp">
+<title>自媒体工作台 · 端砚 Inkstone 插件</title>
+<meta name="description" content="自媒体工作台是端砚 Inkstone 的一个插件：在里面记灵感，让它把灵感写成脚本，配上标题、封面、配图和分镜。这里有三种安装方法。">
+<meta property="og:title" content="自媒体工作台 · 端砚 Inkstone 插件">
+<meta property="og:description" content="端砚 Inkstone 的一个插件，用来记灵感、写脚本、做封面和分镜。这里有三种安装方法。">
+<meta property="og:image" content="assets/hero-zh-light.webp">
 <script>if(!/\/$|\.html$/.test(location.pathname))location.replace(location.pathname+"/"+location.search+location.hash)</script>
 <meta name="color-scheme" content="light dark">
 <style>
@@ -165,15 +165,15 @@ footer p{margin:4px 0}
     <nav class="nav">
       <a href="#install">怎么安装</a>
       <a href="#features" class="hide">装好以后</a>
-      <a href="https://github.com/woniuniuniu/dsh-media-desk">GitHub</a>
-      <a href="https://www.npmjs.com/package/dsh-media-desk" class="hide">npm</a>
+      <a href="https://github.com/APX103/inkstone-media-desk">GitHub</a>
+      <a href="https://www.npmjs.com/package/inkstone-media-desk" class="hide">npm</a>
     </nav>
   </header>
 
   <div class="hero">
-    <span class="pill">DeepSeek Harness 插件 · 免费开源</span>
+    <span class="pill">端砚 Inkstone 插件 · 免费开源</span>
     <h1>自媒体工作台</h1>
-    <p class="lead">这是 DeepSeek Harness 的一个插件。装上以后，侧栏里会多一个页面：你在里面记灵感，它帮你把一条灵感写成脚本，再配上标题、封面、配图和分镜。</p>
+    <p class="lead">这是 端砚 Inkstone 的一个插件。装上以后，侧栏里会多一个页面：你在里面记灵感，它帮你把一条灵感写成脚本，再配上标题、封面、配图和分镜。</p>
 
     <div class="install">
       <div class="install-head">
@@ -184,7 +184,7 @@ footer p{margin:4px 0}
         </div>
       </div>
       <div class="cmd big">
-        <code><span class="p">$ </span><span data-cmd="npm">dsh plugin --profile desktop add dsh-media-desk</span></code>
+        <code><span class="p">$ </span><span data-cmd="npm">dsh plugin --profile desktop add inkstone-media-desk</span></code>
         <button class="copy" type="button">复制</button>
       </div>
       <p class="under">不想用终端的话，下面还有<a href="#install">另外两种安装方法</a>。</p>
@@ -202,7 +202,7 @@ footer p{margin:4px 0}
 
 <section id="install">
   <h2>怎么安装</h2>
-  <p class="sub">一共三种方法，装出来是一样的。需要 DeepSeek Harness <b>0.2.1-rc.5</b> 及以上的 0.2.x 版本。</p>
+  <p class="sub">一共三种方法，装出来是一样的。需要 端砚 Inkstone <b>0.2.1-rc.5</b> 及以上的 0.2.x 版本。</p>
 
   <div class="ways">
 
@@ -214,17 +214,17 @@ footer p{margin:4px 0}
       </div>
       <div class="body">
         <ol class="steps">
-          <li><span data-when="desktop">先把 DeepSeek Harness 完全退出（按 ⌘Q）。</span><span data-when="web" hidden>打开终端。</span></li>
+          <li><span data-when="desktop">先把 端砚 Inkstone 完全退出（按 ⌘Q）。</span><span data-when="web" hidden>打开终端。</span></li>
           <li>在终端里粘贴这一行，回车：
-            <div class="cmd"><code><span class="p">$ </span><span data-cmd="npm">dsh plugin --profile desktop add dsh-media-desk</span></code><button class="copy" type="button">复制</button></div>
+            <div class="cmd"><code><span class="p">$ </span><span data-cmd="npm">dsh plugin --profile desktop add inkstone-media-desk</span></code><button class="copy" type="button">复制</button></div>
           </li>
-          <li><span data-when="desktop">重新打开 DeepSeek Harness，侧栏里就有「自媒体工作台」了。</span><span data-when="web" hidden>重新启动 <code class="in">dsh web</code>，侧栏里就有「自媒体工作台」了。</span></li>
+          <li><span data-when="desktop">重新打开 端砚 Inkstone，侧栏里就有「自媒体工作台」了。</span><span data-when="web" hidden>重新启动 <code class="in">dsh web</code>，侧栏里就有「自媒体工作台」了。</span></li>
         </ol>
         <details>
-          <summary>不用终端：在 DeepSeek Harness 的插件页里安装</summary>
-          <p>打开 DeepSeek Harness 侧栏的「插件」→「添加插件」，输入包名 <code class="in">dsh-media-desk</code>，点安装。</p>
+          <summary>不用终端：在 端砚 Inkstone 的插件页里安装</summary>
+          <p>打开 端砚 Inkstone 侧栏的「插件」→「添加插件」，输入包名 <code class="in">inkstone-media-desk</code>，点安装。</p>
           <p>或者把下面这条索引地址加到「发现」里（要先在「实验性插件」里打开「自定义插件索引」），之后在列表里点安装，更新也是点一下：</p>
-          <div class="cmd"><code>https://raw.githubusercontent.com/woniuniuniu/dsh-media-desk/main/index.json</code><button class="copy" type="button">复制</button></div>
+          <div class="cmd"><code>https://raw.githubusercontent.com/APX103/inkstone-media-desk/main/index.json</code><button class="copy" type="button">复制</button></div>
         </details>
       </div>
     </article>
@@ -232,16 +232,16 @@ footer p{margin:4px 0}
     <article class="way">
       <div class="num">2</div>
       <div>
-        <h3>方法二：把 GitHub 链接发给 DeepSeek Harness</h3>
+        <h3>方法二：把 GitHub 链接发给 端砚 Inkstone</h3>
         <p class="who">让它自己读安装说明，替你装。</p>
       </div>
       <div class="body">
         <ol class="steps">
-          <li>在 DeepSeek Harness 里开一个新会话。</li>
+          <li>在 端砚 Inkstone 里开一个新会话。</li>
           <li>把这句话发给它：
-            <div class="say"><p id="say">帮我安装这个插件：https://github.com/woniuniuniu/dsh-media-desk</p><button class="copy" type="button" data-copy="#say">复制</button></div>
+            <div class="say"><p id="say">帮我安装这个插件：https://github.com/APX103/inkstone-media-desk</p><button class="copy" type="button" data-copy="#say">复制</button></div>
           </li>
-          <li>等它装完，按它说的重启 DeepSeek Harness。</li>
+          <li>等它装完，按它说的重启 端砚 Inkstone。</li>
         </ol>
       </div>
     </article>
@@ -255,12 +255,12 @@ footer p{margin:4px 0}
       <div class="body">
         <ol class="steps">
           <li>下载最新的安装包（一个 <code class="in">.tgz</code> 文件），放到一个以后不会动的文件夹里。<br>
-            <a class="btn" href="https://github.com/woniuniuniu/dsh-media-desk/releases/latest">去下载安装包 →</a>
+            <a class="btn" href="https://github.com/APX103/inkstone-media-desk/releases/latest">去下载安装包 →</a>
           </li>
           <li>在终端里进到那个文件夹，粘贴这一行，回车<span data-when="desktop">（桌面版同样要先 ⌘Q 退出）</span>：
-            <div class="cmd"><code><span class="p">$ </span><span data-cmd="file">dsh plugin --profile desktop add "file:$PWD/dsh-media-desk-2.7.2.tgz"</span></code><button class="copy" type="button">复制</button></div>
+            <div class="cmd"><code><span class="p">$ </span><span data-cmd="file">dsh plugin --profile desktop add "file:$PWD/inkstone-media-desk-2.7.2.tgz"</span></code><button class="copy" type="button">复制</button></div>
           </li>
-          <li><span data-when="desktop">重新打开 DeepSeek Harness。</span><span data-when="web" hidden>重新启动 <code class="in">dsh web</code>。</span></li>
+          <li><span data-when="desktop">重新打开 端砚 Inkstone。</span><span data-when="web" hidden>重新启动 <code class="in">dsh web</code>。</span></li>
         </ol>
       </div>
     </article>
@@ -271,7 +271,7 @@ footer p{margin:4px 0}
     <b>可能遇到的问题</b>
     <ul>
       <li>终端说找不到 <code>dsh</code>：在桌面版的菜单里选「管理 dsh 命令」，注册一下再试。</li>
-      <li>想卸载：把命令里的 <code>add</code> 换成 <code>remove</code>。你的内容一直存在 <code>~/.dsh/media-desk/</code>，不会跟着删。</li>
+      <li>想卸载：把命令里的 <code>add</code> 换成 <code>remove</code>。你的内容一直存在 <code>~/.dsh/inkstone-media-desk/</code>，不会跟着删。</li>
     </ul>
   </div>
 </section>
@@ -306,28 +306,17 @@ footer p{margin:4px 0}
   <h2>要花钱吗</h2>
   <p class="sub">插件免费。但写稿和画图要用到模型，用的是你自己的账号和额度。</p>
   <div class="cost">
-    <div><h3>写脚本</h3><p>用的是你在 DeepSeek Harness 里已经配好的模型。</p></div>
-    <div><h3>画封面和配图</h3><p>要填你自己的生图密钥，或者用 DSH 里已有的订阅生图。不配也能用，只是封面上只有文字。</p></div>
+    <div><h3>写脚本</h3><p>用的是你在端砚 Inkstone 里已经配好的模型：SSO 登录后自动可用，按墨点额度计。</p></div>
+    <div><h3>画封面和配图</h3><p>要填你自己的生图密钥（OpenAI 兼容接口或阿里云百炼）。不配也能用，只是封面上只有文字。</p></div>
     <div><h3>你的内容</h3><p>都存在你自己的电脑上，不上传，也不用注册账号。</p></div>
-  </div>
-</section>
-
-<section>
-  <div class="farm">
-    <a href="https://bozhufarm.com"><img loading="lazy" src="assets/bozhufarm-woo.webp" width="640" height="640" alt="博主农场的农民蜗"></a>
-    <div>
-      <h3>不想自己配模型的话，可以用博主农场</h3>
-      <p>博主农场是我们做的网站，写稿和画图的模型都已经配好了，打开网页就能用。</p>
-      <a class="btn ghost" href="https://bozhufarm.com">打开 bozhufarm.com →</a>
-    </div>
   </div>
 </section>
 
 </main>
 
 <footer class="wrap">
-  <p>由小红书科技博主 <a href="https://www.xiaohongshu.com/user/profile/5faedce8000000000101c8a3">蜗牛的科技笔记</a> 开发 · <a href="https://github.com/woniuniuniu/dsh-media-desk">GitHub</a> · <a href="https://www.npmjs.com/package/dsh-media-desk">npm</a> · <a href="https://github.com/woniuniuniu/dsh-media-desk/issues">反馈问题</a></p>
-  <p>MIT 开源 · 社区插件，与 DeepSeek 无关。DeepSeek Harness 的名称和标识归其所有者所有。</p>
+  <p>原版由小红书科技博主 <a href="https://www.xiaohongshu.com/user/profile/5faedce8000000000101c8a3">蜗牛的科技笔记</a> 开发，本分支面向端砚 Inkstone 适配 · <a href="https://github.com/APX103/inkstone-media-desk">GitHub</a> · <a href="https://www.npmjs.com/package/inkstone-media-desk">npm</a> · <a href="https://github.com/APX103/inkstone-media-desk/issues">反馈问题</a></p>
+  <p>MIT 开源 · 社区插件，与 DeepSeek 无关。端砚 Inkstone 的名称和标识归其所有者所有。</p>
 </footer>
 
 <script>
@@ -335,10 +324,10 @@ footer p{margin:4px 0}
   var profile='desktop', version='2.7.2';
   function render(){
     document.querySelectorAll('[data-cmd="npm"]').forEach(function(el){
-      el.textContent='dsh plugin --profile '+profile+' add dsh-media-desk';
+      el.textContent='dsh plugin --profile '+profile+' add inkstone-media-desk';
     });
     document.querySelectorAll('[data-cmd="file"]').forEach(function(el){
-      el.textContent='dsh plugin --profile '+profile+' add "file:$PWD/dsh-media-desk-'+version+'.tgz"';
+      el.textContent='dsh plugin --profile '+profile+' add "file:$PWD/inkstone-media-desk-'+version+'.tgz"';
     });
     document.querySelectorAll('[data-when]').forEach(function(el){
       el.hidden = el.getAttribute('data-when')!==profile;
@@ -365,7 +354,7 @@ footer p{margin:4px 0}
   });
   render();
   // 版本号跟着 npm 上的最新发布走；取不到就用上面写的那个。
-  fetch('https://registry.npmjs.org/dsh-media-desk/latest').then(function(r){return r.ok?r.json():null;})
+  fetch('https://registry.npmjs.org/inkstone-media-desk/latest').then(function(r){return r.ok?r.json():null;})
     .then(function(j){if(j&&/^\d+\.\d+\.\d+/.test(j.version)){version=j.version;render();}}).catch(function(){});
 })();
 </script>
