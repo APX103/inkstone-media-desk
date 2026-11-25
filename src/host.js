@@ -464,7 +464,9 @@ export function requestRejection(ctx, req) {
 export const name = 'inkstone-media-desk'
 
 export default {
-  inject: ['webServer', 'connection'],
+  // connection.authentication：admit 内部要读凭证校验服务；cordis 按「调用方声明的 inject」
+  // 归因服务访问，不声明就会在调用 admit 时抛 without inject。
+  inject: ['webServer', 'connection', 'connection.authentication'],
   apply(ctx) {
     const store = new Store()
     const settings = new Settings(store.root)

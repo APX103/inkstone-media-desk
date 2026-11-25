@@ -1,4 +1,4 @@
-// 持久化：$DSH_HOME/inkstone-media-desk/state.json。桌面端和 Web 端读同一份数据。
+// 持久化：$INKSTONE_HOME/inkstone-media-desk/state.json。桌面端和 Web 端读同一份数据。
 // 两个 Host 进程可能同时运行，所以每次写入前都按 mtime 判断是否需要重读。
 import { mkdir, readFile, rename, stat, writeFile } from 'node:fs/promises'
 import { homedir } from 'node:os'
@@ -56,8 +56,10 @@ export function revertChange(before, after, current) {
   return current
 }
 
+// 端砚 fork：harness 的家是 ~/.inkstone（env 覆盖 INKSTONE_HOME，见 harness 的
+// packages/util/home-paths）；上游原版仍是 ~/.dsh（DSH_HOME），env 保留兼容。
 export function dshHome(env = process.env) {
-  return env.DSH_HOME || join(homedir(), '.dsh')
+  return env.INKSTONE_HOME || env.DSH_HOME || join(homedir(), '.inkstone')
 }
 
 export class Store {

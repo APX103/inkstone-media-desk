@@ -212,8 +212,8 @@ test('英文成稿：回执、默认景别和封面大字兜底都是英文，�
 
 test('GET state 按请求头的语言换示例文字', async () => {
   const dir = await mkdtemp(join(tmpdir(), 'inkstone-media-desk-'))
-  const previous = process.env.DSH_HOME
-  process.env.DSH_HOME = dir
+  const previous = process.env.INKSTONE_HOME
+  process.env.INKSTONE_HOME = dir
   try {
     let handler = null
     const ctx = {
@@ -236,8 +236,8 @@ test('GET state 按请求头的语言换示例文字', async () => {
     const back = await get('zh')
     assert.equal(back.body.state.items[0].title, zh.body.state.items[0].title)
   } finally {
-    if (previous === undefined) delete process.env.DSH_HOME
-    else process.env.DSH_HOME = previous
+    if (previous === undefined) delete process.env.INKSTONE_HOME
+    else process.env.INKSTONE_HOME = previous
     await rm(dir, { recursive: true, force: true })
   }
 })

@@ -182,7 +182,7 @@ dsh plugin --profile web add inkstone-media-desk
 
 **3. Open.** **Media Desk** appears in the sidebar. On first launch it's filled with sample data so you can explore every page. Click **Clear sample data** in the top right when you're ready to start with your own.
 
-To uninstall, replace `add` with `remove`. Your content stays in `~/.dsh/inkstone-media-desk/`.
+To uninstall, replace `add` with `remove`. Your content stays in `~/.inkstone/inkstone-media-desk/`.
 
 <br>
 
@@ -250,7 +250,7 @@ No. Platforms don't offer a common publishing API, so copy the script or save th
 <summary><b>Where is my data?</b></summary>
 <br>
 
-Everything stays on your computer in `~/.dsh/inkstone-media-desk/`, shared by the desktop and web versions. No cloud and no sign-up.
+Everything stays on your computer in `~/.inkstone/inkstone-media-desk/`, shared by the desktop and web versions. No cloud and no sign-up.
 
 </details>
 

@@ -191,7 +191,7 @@ dsh plugin --profile web add inkstone-media-desk
 
 **3. 打开。** 侧栏会出现「自媒体工作台」。第一次看到的都是示例数据，方便你先看看每个页面长什么样；点右上角「示例数据 · 清空」，换成自己的。
 
-卸载时把 `add` 换成 `remove inkstone-media-desk`。你的内容一直在 `~/.dsh/inkstone-media-desk/`，不会跟着删。
+卸载时把 `add` 换成 `remove inkstone-media-desk`。你的内容一直在 `~/.inkstone/inkstone-media-desk/`，不会跟着删。
 
 <br>
 
@@ -243,7 +243,7 @@ dsh plugin --profile web add inkstone-media-desk
 <summary><b>我的东西存在哪？</b></summary>
 <br>
 
-全在本机 `~/.dsh/inkstone-media-desk/`，桌面版和网页版共用。没有云端，没有账号系统。
+全在本机 `~/.inkstone/inkstone-media-desk/`，桌面版和网页版共用。没有云端，没有账号系统。
 
 </details>
 
